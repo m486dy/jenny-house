@@ -27,7 +27,7 @@
       <nav class="menu" id="menu">
         <a href="#jennifer">About</a>
         <a href="#menu-list">Menu</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#gallery">Styles</a>
         <a href="#visit">Visit</a>
         <a href="ko/" class="lang-switch" lang="ko">한국어</a>
         <a href="#book" class="btn btn-small">Book Now</a>
@@ -133,29 +133,172 @@
   <section class="services" id="menu-list">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Menu</p>
-        <h2>Every price starts with <em>a conversation</em></h2>
-        <p class="section-sub">Every head of hair and every life is different, so your price is confirmed after your consultation — always before we begin, with no surprises.</p>
+        <p class="eyebrow">Menu &amp; Prices</p>
+        <h2>Every service starts with <em>a conversation</em></h2>
+        <p class="section-sub">All services include a personalised consultation. We'll always confirm your price before we begin.</p>
       </div>
-      <div class="price-cards three">
-        <div class="price-card reveal">
-          <p class="card-tag">Keep it fresh</p>
-          <h3>Classic Cut</h3>
-          <p>Keep your current style neat and tidy — a precise cut shaped around how you style it every day.</p>
-          <p class="price-note">Priced after consultation</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="women">Women</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="men">Men</button>
+      </div>
+
+      <!-- 여성 메뉴 -->
+      <div class="tab-panel active" id="panel-women" role="tabpanel">
+        <h3 class="menu-group">Cut</h3>
+        <div class="price-cards three">
+          <div class="price-card">
+            <p class="card-tag">Keep it fresh</p>
+            <h3>Essential Cut</h3>
+            <p class="price">$50</p>
+            <p class="meta">No shampoo</p>
+            <ul class="includes">
+              <li>Consultation</li>
+              <li>A quick, neat cut to maintain your style</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <p class="card-tag">Ready for something new</p>
+            <h3>Restyle Cut</h3>
+            <p class="price">$70</p>
+            <p class="meta">Shampoo for short hair · long hair +$10</p>
+            <ul class="includes">
+              <li>Style consultation</li>
+              <li>Simple blow-dry</li>
+              <li>Eyebrow design</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="card-tag">The full experience</p>
+            <h3>Premium Cut</h3>
+            <p class="price">$100</p>
+            <p class="meta">Treatment shampoo included</p>
+            <ul class="includes">
+              <li>Treatment (clinic) shampoo</li>
+              <li>Scalp <em>or</em> hair pack care</li>
+              <li>Styling</li>
+              <li>Eyebrow design</li>
+            </ul>
+          </div>
         </div>
-        <div class="price-card featured reveal">
-          <p class="card-tag">Ready for something new</p>
-          <h3>Style Change Cut</h3>
-          <p>Time for a new look? We find the style that suits your face, your image and your lifestyle — then design the cut to match.</p>
-          <p class="price-note">Priced after consultation</p>
+
+        <h3 class="menu-group">Perm &amp; Straightening</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="ml-head"><span class="ml-name">Fringe Perm <small>or</small> Baby Hair Perm</span><span class="ml-price">$60</span></div>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Essential Perm</span><span class="ml-price">$170 / $230</span></div>
+            <p class="ml-desc">Short hair $170 — cut + cold perm<br>Shoulder length $230 — design cut + root volume + cold perm</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Essential Digital Perm</span><span class="ml-price">from $240</span></div>
+            <p class="ml-desc">Cut + digital (heat) perm + basic design</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Essential Volume Straight</span><span class="ml-price">$250</span></div>
+            <p class="ml-desc">Cut + volume straightening</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Signature Wave <small>or</small> Hippie Perm</span><span class="ml-price">from $270</span></div>
+            <p class="ml-desc">Design cut + keratin + protein perm solution + design perm + treatment + eyebrow design</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">SC Curl Perm</span><span class="ml-price">$300 – $400</span></div>
+            <p class="ml-desc">Design cut + premium perm solution + root perm + treatment + styling · price varies with length and volume</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Signature Digital Perm</span><span class="ml-price">from $320</span></div>
+            <p class="ml-desc">Design cut + premium perm solution + treatment + root perm + design curl + eyebrow design</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Signature Volume Straight</span><span class="ml-price">from $320</span></div>
+            <p class="ml-desc">Design cut + premium perm solution + treatment + root volume + volume straight curl + eyebrow design</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Premium Straight &amp; Setting</span><span class="ml-price">$400</span></div>
+            <p class="ml-desc">Design cut + premium perm solution + treatment + root volume + straightening + setting perm + eyebrow design</p>
+          </li>
+        </ul>
+        <p class="menu-note">Perm prices are based on bob length. Longer or thicker hair may add from $20, depending on the time needed.</p>
+      </div>
+
+      <!-- 남성 메뉴 -->
+      <div class="tab-panel" id="panel-men" role="tabpanel" hidden>
+        <h3 class="menu-group">Cut</h3>
+        <div class="price-cards three">
+          <div class="price-card">
+            <p class="card-tag">Quick &amp; clean</p>
+            <h3>Essential Cut</h3>
+            <p class="price">$40</p>
+            <p class="meta">20 min · No shampoo</p>
+            <ul class="includes">
+              <li>Quick consultation</li>
+              <li>Keep your style, tidy the length</li>
+              <li>Fast, clean maintenance cut</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <p class="card-tag">Designed for you</p>
+            <h3>Signature Design Cut</h3>
+            <p class="price">$50</p>
+            <p class="meta">30 min · Shampoo included</p>
+            <ul class="includes">
+              <li>Style consultation</li>
+              <li>Designed for your face shape &amp; hair type</li>
+              <li>Shampoo after cut</li>
+              <li>Eyebrow design</li>
+              <li>From keeping your style to a light change</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="card-tag">Full service</p>
+            <h3>Premium Cut</h3>
+            <p class="price">$85</p>
+            <p class="meta">60 min · Full service</p>
+            <ul class="includes">
+              <li>Detailed style consultation</li>
+              <li>Shampoo &amp; custom design cut</li>
+              <li>Scalp care — scaling pack, massage &amp; tonic</li>
+              <li>Styling &amp; eyebrow design</li>
+              <li>Home-care and styling tips</li>
+            </ul>
+          </div>
         </div>
-        <div class="price-card reveal">
-          <p class="card-tag">The full experience</p>
-          <h3>Premium</h3>
-          <p>The complete Jenny House experience — an in-depth consultation and full design, including colour, perm or treatment as your hair needs.</p>
-          <p class="price-note">Priced after consultation</p>
-        </div>
+
+        <h3 class="menu-group">Perm &amp; Down Perm</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="ml-head"><span class="ml-name">Side Down Perm + Haircut</span><span class="ml-price">$80</span></div>
+            <p class="ml-desc">50 min · Neatly flattens puffy sides for a clean look. Recommended if your side hair sticks out.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Side &amp; Back Down Perm + Haircut</span><span class="ml-price">$100</span></div>
+            <p class="ml-desc">60 min · Tames both sides and back for a cleaner silhouette. Recommended if your hair puffs up all over.</p>
+            <span class="badge">Shampoo &amp; 3-minute blow-dry every morning!</span>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Signature Style Cut + Down Perm</span><span class="ml-price">$120</span></div>
+            <p class="ml-desc">75 min · A design cut and down perm together to complete your whole silhouette. Recommended for thick hair that puffs up all over.</p>
+            <span class="badge">Shampoo &amp; 3-minute blow-dry every morning!</span>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Leaf Perm</span><span class="ml-price">$140</span></div>
+            <p class="ml-desc">100 min · Natural flow and light volume — lifts the roots while gently laying down puffy areas.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Design Perm</span><span class="ml-price">$140</span></div>
+            <p class="ml-desc">120 min · Curls and natural volume designed for your face shape, hair type and the image you want.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Hippie Perm</span><span class="ml-price">$160</span></div>
+            <p class="ml-desc">120 min · Full curls with a free, textured feel.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">Volume Straight</span><span class="ml-price">$200</span></div>
+            <p class="ml-desc">Smooths frizz and curl while keeping natural volume, shine and soft movement — easy to style every day. Add a cut +$40.</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -164,15 +307,17 @@
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Gallery</p>
-        <h2>Recent <em>work</em></h2>
+        <p class="eyebrow">Style Inspiration</p>
+        <h2>Find your <em>next look</em></h2>
+        <p class="section-sub">Reference styles to help you picture your change — bring one along to your consultation.</p>
       </div>
       <div class="gallery-grid">
-        <img class="reveal" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80" alt="Long layered hair" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="Hair styling in the salon" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=80" alt="Salon chair and mirror" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80" alt="Salon interior" loading="lazy">
+        <img class="reveal" src="images/mens-style-1.jpg" alt="Men's short side-parted cut with faded sides" loading="lazy">
+        <img class="reveal" src="images/mens-style-2.jpg" alt="Men's soft textured perm with curtain fringe" loading="lazy">
+        <img class="reveal" src="images/mens-style-3.jpg" alt="Men's natural centre-parted wave" loading="lazy">
+        <img class="reveal" src="images/mens-style-4.jpg" alt="Men's short textured crop" loading="lazy">
       </div>
+      <p class="gallery-caption">Style reference images</p>
       <div class="center">
         <a class="btn btn-ghost" href="https://www.instagram.com/jennyhouse_nz/" target="_blank" rel="noopener">See more on Instagram @jennyhouse_nz</a>
       </div>

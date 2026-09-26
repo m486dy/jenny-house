@@ -32,5 +32,17 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
+// 메뉴 탭 (여성 / 남성) 전환
+document.querySelectorAll(".tab").forEach((tab) =>
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach((t) => {
+      const on = t === tab;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on);
+      document.getElementById("panel-" + t.dataset.tab).hidden = !on;
+    });
+  })
+);
+
 // 하단 연도 자동 표시
 document.getElementById("year").textContent = new Date().getFullYear();

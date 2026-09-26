@@ -27,7 +27,7 @@
       <nav class="menu" id="menu">
         <a href="#jennifer">원장 소개</a>
         <a href="#menu-list">메뉴</a>
-        <a href="#gallery">갤러리</a>
+        <a href="#gallery">스타일</a>
         <a href="#visit">오시는 길</a>
         <a href="../" class="lang-switch" lang="en">EN</a>
         <a href="#book" class="btn btn-small">예약하기</a>
@@ -134,29 +134,172 @@
   <section class="services" id="menu-list">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">메뉴</p>
-        <h2>모든 가격은 <em>상담</em>에서 시작합니다</h2>
-        <p class="section-sub">머리 상태도, 생활 방식도 사람마다 다르기 때문에 가격은 상담 후 안내해 드립니다. 시술 전에 꼭 먼저 말씀드리니 걱정하지 마세요.</p>
+        <p class="eyebrow">메뉴 &amp; 가격</p>
+        <h2>모든 시술은 <em>상담</em>에서 시작합니다</h2>
+        <p class="section-sub">모든 시술에는 맞춤 상담이 포함되어 있습니다. 시술 전 가격을 꼭 먼저 안내해 드려요.</p>
       </div>
-      <div class="price-cards three">
-        <div class="price-card reveal">
-          <p class="card-tag">깔끔하게 유지하고 싶을 때</p>
-          <h3>일반 커트</h3>
-          <p>지금 스타일을 깔끔하게 유지하고 싶을 때. 평소 손질 방식에 맞춰 정교하게 다듬어 드립니다.</p>
-          <p class="price-note">상담 후 가격 안내</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="women">여성</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="men">남성</button>
+      </div>
+
+      <!-- 여성 메뉴 -->
+      <div class="tab-panel active" id="panel-women" role="tabpanel">
+        <h3 class="menu-group">커트</h3>
+        <div class="price-cards three">
+          <div class="price-card">
+            <p class="card-tag">깔끔하게 유지</p>
+            <h3>에센셜 커트</h3>
+            <p class="price">$50</p>
+            <p class="meta">샴푸 없음</p>
+            <ul class="includes">
+              <li>상담</li>
+              <li>빠르고 깔끔한 유지관리 커트</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <p class="card-tag">스타일 변화를 원한다면</p>
+            <h3>리스타일 커트</h3>
+            <p class="price">$70</p>
+            <p class="meta">짧은 머리 샴푸 가능 · 긴 머리 +$10</p>
+            <ul class="includes">
+              <li>스타일 상담</li>
+              <li>간단한 블로우 드라이</li>
+              <li>눈썹 디자인</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="card-tag">제니하우스의 모든 것</p>
+            <h3>프리미엄 커트</h3>
+            <p class="price">$100</p>
+            <p class="meta">클리닉 샴푸 포함</p>
+            <ul class="includes">
+              <li>클리닉 샴푸</li>
+              <li>두피 또는 모발 팩 케어</li>
+              <li>스타일링</li>
+              <li>눈썹 디자인</li>
+            </ul>
+          </div>
         </div>
-        <div class="price-card featured reveal">
-          <p class="card-tag">새로운 변화를 원한다면</p>
-          <h3>스타일 변화 커트</h3>
-          <p>새로운 모습이 필요할 때. 얼굴형과 원하는 이미지, 라이프스타일에 맞는 스타일을 찾아 디자인합니다.</p>
-          <p class="price-note">상담 후 가격 안내</p>
+
+        <h3 class="menu-group">펌 &amp; 매직</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="ml-head"><span class="ml-name">앞머리펌 <small>또는</small> 잔머리펌</span><span class="ml-price">$60</span></div>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">에센셜 펌</span><span class="ml-price">$170 / $230</span></div>
+            <p class="ml-desc">짧은 머리 기장 $170 — 커트 + 콜드펌<br>어깨 기장 $230 — 디자인 커트 + 뿌리 볼륨 + 콜드펌</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">에센셜 열펌</span><span class="ml-price">$240~</span></div>
+            <p class="ml-desc">커트 + 열펌제 + 기본 디자인</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">에센셜 볼륨매직</span><span class="ml-price">$250</span></div>
+            <p class="ml-desc">커트 + 볼륨매직</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">시그니처 디자인 물결펌 <small>또는</small> 히피펌</span><span class="ml-price">$270~</span></div>
+            <p class="ml-desc">디자인 컷 + 케라틴 + 단백질 펌제 + 디자인 펌 + 클리닉 + 눈썹 디자인</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">SC컬펌</span><span class="ml-price">$300 – $400</span></div>
+            <p class="ml-desc">디자인 커트 + 프리미엄 펌제 + 뿌리펌 + 클리닉 + 스타일링 · 기장과 모량에 따라 차이</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">시그니처 열펌</span><span class="ml-price">$320~</span></div>
+            <p class="ml-desc">디자인 컷 + 프리미엄 펌제 + 클리닉 + 뿌리펌 + 디자인 컬 + 눈썹 디자인</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">시그니처 볼륨매직</span><span class="ml-price">$320~</span></div>
+            <p class="ml-desc">디자인 컷 + 프리미엄 펌제 + 클리닉 + 뿌리 볼륨 + 볼륨매직 컬 + 눈썹 디자인</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">프리미엄 매직셋팅</span><span class="ml-price">$400</span></div>
+            <p class="ml-desc">디자인 컷 + 프리미엄 펌제 + 클리닉 + 뿌리 볼륨 + 매직 + 셋팅 + 눈썹 디자인</p>
+          </li>
+        </ul>
+        <p class="menu-note">펌 가격은 단발 기준입니다. 기장 추가는 모량과 기장에 따른 시술 소요시간에 따라 $20부터 추가됩니다.</p>
+      </div>
+
+      <!-- 남성 메뉴 -->
+      <div class="tab-panel" id="panel-men" role="tabpanel" hidden>
+        <h3 class="menu-group">커트</h3>
+        <div class="price-cards three">
+          <div class="price-card">
+            <p class="card-tag">빠르고 깔끔하게</p>
+            <h3>에센셜 커트</h3>
+            <p class="price">$40</p>
+            <p class="meta">20분 · 샴푸 없음</p>
+            <ul class="includes">
+              <li>간단한 상담</li>
+              <li>기존 스타일 유지 및 길이 정리</li>
+              <li>빠르고 깔끔한 유지관리 커트</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <p class="card-tag">나에게 맞춘 디자인</p>
+            <h3>시그니처 디자인 커트</h3>
+            <p class="price">$50</p>
+            <p class="meta">30분 · 샴푸 포함</p>
+            <ul class="includes">
+              <li>스타일 상담</li>
+              <li>얼굴형·모질에 맞춘 디자인</li>
+              <li>커트 후 샴푸</li>
+              <li>눈썹 디자인</li>
+              <li>기존 스타일 유지부터 가벼운 스타일 변화까지</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="card-tag">풀 서비스</p>
+            <h3>프리미엄 커트</h3>
+            <p class="price">$85</p>
+            <p class="meta">60분 · 풀 서비스</p>
+            <ul class="includes">
+              <li>디테일한 스타일 상담</li>
+              <li>샴푸 · 맞춤 디자인 커트</li>
+              <li>두피 케어 — 스케일링 팩 + 마사지 + 토닉</li>
+              <li>스타일링 · 눈썹 디자인</li>
+              <li>홈케어 및 손질 방법 안내</li>
+            </ul>
+          </div>
         </div>
-        <div class="price-card reveal">
-          <p class="card-tag">제니하우스의 모든 것</p>
-          <h3>프리미엄</h3>
-          <p>깊이 있는 상담과 함께 커트는 물론, 필요에 따라 컬러·펌·클리닉까지 완성도 있게 디자인하는 코스입니다.</p>
-          <p class="price-note">상담 후 가격 안내</p>
-        </div>
+
+        <h3 class="menu-group">펌 &amp; 다운펌</h3>
+        <ul class="menu-list">
+          <li>
+            <div class="ml-head"><span class="ml-name">사이드 다운펌 + 커트</span><span class="ml-price">$80</span></div>
+            <p class="ml-desc">50분 · 사이드 볼륨과 뜨는 부분을 자연스럽게 눌러 깔끔하게 정돈합니다. 옆머리가 유난히 뜨시는 분께 추천.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">사이드 &amp; 백 다운펌 + 커트</span><span class="ml-price">$100</span></div>
+            <p class="ml-desc">60분 · 사이드와 백의 뜨는 부분을 함께 정리해 더욱 깔끔한 실루엣을 만듭니다. 전체적으로 모발이 많이 뜨시는 분께 추천.</p>
+            <span class="badge">아침마다 샴푸하고 드라이 3분 컷!</span>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">시그니처 스타일 커트 + 다운펌</span><span class="ml-price">$120</span></div>
+            <p class="ml-desc">75분 · 스타일에 맞는 디자인 커트와 다운펌으로 전체 실루엣을 완성합니다. 모발이 두껍고 전체적으로 많이 뜨시는 분께 추천.</p>
+            <span class="badge">아침마다 샴푸하고 드라이 3분 컷!</span>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">리프펌</span><span class="ml-price">$140</span></div>
+            <p class="ml-desc">100분 · 뿌리 볼륨은 살리고 뜨는 부분은 자연스럽게 눕혀, 자연스러운 흐름과 가벼운 볼륨을 만듭니다.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">디자인펌</span><span class="ml-price">$140</span></div>
+            <p class="ml-desc">120분 · 얼굴형과 모질, 원하는 이미지에 맞춰 컬과 자연스러운 볼륨을 디자인하는 맞춤 펌.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">히피펌</span><span class="ml-price">$160</span></div>
+            <p class="ml-desc">120분 · 풍성한 컬과 자유로운 텍스처를 살린 히피펌.</p>
+          </li>
+          <li>
+            <div class="ml-head"><span class="ml-name">볼륨매직</span><span class="ml-price">$200</span></div>
+            <p class="ml-desc">부스스함과 곱슬을 자연스럽게 정돈하면서 볼륨과 부드러운 흐름, 윤기를 살려 매일 손질하기 편한 스타일로 완성합니다. 커트 추가 시 +$40.</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -165,15 +308,17 @@
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">갤러리</p>
-        <h2>최근 <em>작업</em></h2>
+        <p class="eyebrow">스타일 참고</p>
+        <h2>나의 <em>다음 스타일</em>은?</h2>
+        <p class="section-sub">원하는 느낌을 떠올리는 데 도움이 되는 참고 스타일이에요. 마음에 드는 사진을 상담 때 보여주세요.</p>
       </div>
       <div class="gallery-grid">
-        <img class="reveal" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80" alt="긴 레이어드 헤어" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="헤어 스타일링" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=80" alt="미용실 의자와 거울" loading="lazy">
-        <img class="reveal" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80" alt="미용실 내부" loading="lazy">
+        <img class="reveal" src="../images/mens-style-1.jpg" alt="옆을 짧게 정리한 남성 가르마 커트" loading="lazy">
+        <img class="reveal" src="../images/mens-style-2.jpg" alt="앞머리를 내린 남성 텍스처 펌" loading="lazy">
+        <img class="reveal" src="../images/mens-style-3.jpg" alt="자연스러운 가르마 웨이브 남성 스타일" loading="lazy">
+        <img class="reveal" src="../images/mens-style-4.jpg" alt="짧은 텍스처 크롭 남성 커트" loading="lazy">
       </div>
+      <p class="gallery-caption">스타일 참고 이미지</p>
       <div class="center">
         <a class="btn btn-ghost" href="https://www.instagram.com/jennyhouse_nz/" target="_blank" rel="noopener">인스타그램에서 더 보기 @jennyhouse_nz</a>
       </div>
