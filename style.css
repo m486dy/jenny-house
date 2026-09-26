@@ -228,6 +228,7 @@ section { padding: 100px 0; }
   object-position: center 25%; background: var(--sand); transition: transform .4s;
 }
 .gallery-grid img:hover { transform: scale(1.02); }
+.gallery-grid + .menu-group { margin-top: 3rem; }
 .gallery-caption { text-align: center; font-size: .78rem; color: var(--muted); margin-top: .9rem; letter-spacing: .05em; }
 
 /* ===== 예약 ===== */
