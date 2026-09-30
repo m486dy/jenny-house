@@ -88,20 +88,21 @@ section { padding: 100px 0; }
 /* ===== 메인 화면 ===== */
 .hero { position: relative; min-height: 88vh; display: flex; align-items: center; padding: 80px 0; }
 .hero-bg {
-  position: absolute; inset: 0;
+  position: absolute; top: 0; right: 0; bottom: 0; width: 48%;
   background:
-    linear-gradient(90deg, rgba(250,246,240,.98) 0%, rgba(250,246,240,.92) 48%, rgba(250,246,240,.2) 85%),
-    url("https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1800&q=80") center right / cover no-repeat,
+    linear-gradient(90deg, rgba(250,246,240,1) 0%, rgba(250,246,240,0) 30%),
+    url("images/jennifer-working.jpg") 55% 30% / cover no-repeat,
     var(--beige);
 }
 .hero-content { position: relative; }
+.hero-content > * { max-width: 560px; }
 .hero h1 { font-size: clamp(3rem, 8vw, 5.6rem); font-weight: 400; margin-bottom: 1.5rem; }
 .hero .lead { margin-bottom: 2.4rem; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ===== 고민 ===== */
 .pains { background: var(--beige); }
-.pain-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.pain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .pain {
   background: var(--cream); border: 1px solid var(--sand); border-radius: 6px;
   padding: 28px 22px; font-size: .98rem; color: var(--brown);
@@ -149,6 +150,11 @@ section { padding: 100px 0; }
 .about-img img {
   width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
   border-radius: 200px 200px 6px 6px; background: var(--sand);
+  object-position: 65% 20%;
+}
+.about-img .about-inset {
+  position: absolute; left: -36px; bottom: -36px; width: 42%; aspect-ratio: 1;
+  border-radius: 50%; border: 6px solid var(--cream); box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 .about-text p { margin-bottom: 1.1rem; }
 .name-sub { font-size: .9rem; letter-spacing: .12em; color: var(--muted); margin-top: -.6rem; }
@@ -305,7 +311,7 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
 /* ===== 작은 노트북 ===== */
 @media (max-width: 1080px) {
   .menu { gap: 22px; }
-  .pain-grid { grid-template-columns: repeat(3, 1fr); }
+  .pain-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ===== 태블릿 ===== */
@@ -339,13 +345,14 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .nav.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   .hero { min-height: auto; padding: 0 0 64px; flex-direction: column; align-items: stretch; }
   .hero-bg {
-    position: relative; height: 46vh; min-height: 280px;
+    position: relative; width: 100%; height: 46vh; min-height: 280px;
     background:
       linear-gradient(180deg, rgba(250,246,240,0) 60%, rgba(250,246,240,1) 100%),
-      url("https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=900&q=80") center / cover no-repeat,
+      url("images/jennifer-working.jpg") 50% 25% / cover no-repeat,
       var(--beige);
   }
   .hero-content { margin-top: -20px; }
+  .about-img .about-inset { left: -14px; bottom: -28px; width: 38%; border-width: 4px; }
   .pain-grid { grid-template-columns: 1fr; gap: 10px; }
   .pain { display: flex; align-items: baseline; gap: 14px; padding: 18px 20px; }
   .pain .num { margin: 0; font-size: 1.3rem; }
