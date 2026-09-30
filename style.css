@@ -150,7 +150,7 @@ section { padding: 100px 0; }
 .about-img img {
   width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
   border-radius: 200px 200px 6px 6px; background: var(--sand);
-  object-position: 65% 20%;
+  object-position: 50% 20%;
 }
 .about-img .about-inset {
   position: absolute; left: -36px; bottom: -36px; width: 42%; aspect-ratio: 1;
