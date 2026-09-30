@@ -162,6 +162,11 @@ section { padding: 100px 0; }
 
 /* ===== 가격 ===== */
 .services { background: var(--beige); }
+.menu-photos { display: flex; justify-content: center; gap: 14px; margin: 8px 0 44px; }
+.menu-photos img {
+  flex: 0 0 150px; width: 150px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
+  border-radius: 80px 80px 6px 6px; background: var(--sand);
+}
 .price-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 28px; justify-content: center; }
 .price-card {
   background: var(--cream); padding: 48px 36px; text-align: center;
@@ -357,6 +362,9 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .pain { display: flex; align-items: baseline; gap: 14px; padding: 18px 20px; }
   .pain .num { margin: 0; font-size: 1.3rem; }
   .price-cards { grid-template-columns: 1fr; }
+  .menu-photos { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px 32px; padding: 0 16px 6px; gap: 10px; scrollbar-width: none; }
+  .menu-photos::-webkit-scrollbar { display: none; }
+  .menu-photos img { flex-basis: 112px; width: 112px; scroll-snap-align: start; border-radius: 60px 60px 6px 6px; }
   .price-card { padding: 34px 24px; }
   .menu-list { padding: 4px 18px; }
   .ml-head { flex-wrap: wrap; gap: 4px 12px; }
