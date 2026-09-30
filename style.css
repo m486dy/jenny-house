@@ -86,16 +86,16 @@ section { padding: 100px 0; }
 .burger span { display: block; width: 24px; height: 1.5px; background: var(--brown); margin: 5px 0; transition: .3s; }
 
 /* ===== 메인 화면 ===== */
-.hero { position: relative; min-height: 88vh; display: flex; align-items: center; padding: 80px 0; }
-.hero-bg {
-  position: absolute; top: 0; right: 0; bottom: 0; width: 48%;
-  background:
-    linear-gradient(90deg, rgba(250,246,240,1) 0%, rgba(250,246,240,0) 30%),
-    url("images/jennifer-working.jpg") 55% 30% / cover no-repeat,
-    var(--beige);
-}
-.hero-content { position: relative; }
+.hero { position: relative; display: flex; align-items: center; padding: 72px 0 96px; }
+.hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 56px; align-items: center; }
+.hero-content { position: relative; min-width: 0; }
 .hero-content > * { max-width: 560px; }
+.hero-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.hero-photos img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
+  border-radius: 999px 999px 6px 6px; background: var(--sand);
+}
+.hero-photos img:nth-child(3n+2) { transform: translateY(28px); }
 .hero h1 { font-size: clamp(3rem, 8vw, 5.6rem); font-weight: 400; margin-bottom: 1.5rem; }
 .hero .lead { margin-bottom: 2.4rem; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -324,6 +324,8 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .price-cards.three { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
   .pillars { grid-template-columns: 1fr; gap: 32px; }
   .about-grid, .visit-grid { grid-template-columns: 1fr; gap: 56px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-photos { order: -1; max-width: 420px; width: 100%; margin: 0 auto; }
   .about-img { max-width: 440px; margin: 0 auto; width: calc(100% - 24px); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -348,15 +350,9 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .nav.menu-open .burger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .nav.menu-open .burger span:nth-child(2) { opacity: 0; }
   .nav.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-  .hero { min-height: auto; padding: 0 0 64px; flex-direction: column; align-items: stretch; }
-  .hero-bg {
-    position: relative; width: 100%; height: 46vh; min-height: 280px;
-    background:
-      linear-gradient(180deg, rgba(250,246,240,0) 60%, rgba(250,246,240,1) 100%),
-      url("images/jennifer-working.jpg") 50% 25% / cover no-repeat,
-      var(--beige);
-  }
-  .hero-content { margin-top: -20px; }
+  .hero { padding: 28px 0 56px; }
+  .hero-photos { max-width: 290px; gap: 8px; }
+  .hero-photos img:nth-child(3n+2) { transform: translateY(16px); }
   .about-img .about-inset { left: -14px; bottom: -28px; width: 38%; border-width: 4px; }
   .pain-grid { grid-template-columns: 1fr; gap: 10px; }
   .pain { display: flex; align-items: baseline; gap: 14px; padding: 18px 20px; }
