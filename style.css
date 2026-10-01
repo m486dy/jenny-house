@@ -97,7 +97,16 @@ section { padding: 100px 0; }
 }
 .hero-photos img:nth-child(3n+2) { transform: translateY(28px); }
 .hero h1 { font-size: clamp(3rem, 8vw, 5.6rem); font-weight: 400; margin-bottom: 1.5rem; }
-.hero .lead { margin-bottom: 2.4rem; }
+.hero .lead { margin-bottom: 2rem; }
+.hero-promise {
+  border-left: 2px solid var(--accent); background: rgba(241,232,220,.7);
+  padding: 18px 24px; border-radius: 0 6px 6px 0; margin-bottom: 2.4rem;
+}
+.hero-promise-title {
+  font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.55rem; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); line-height: 1.2; margin-bottom: .5rem;
+}
+.hero-promise p:last-child { font-size: 1rem; color: var(--text); line-height: 1.6; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ===== 고민 ===== */
@@ -392,6 +401,9 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .nav.menu-open .burger span:nth-child(2) { opacity: 0; }
   .nav.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   .hero { padding: 28px 0 56px; }
+  .hero-promise { padding: 16px 18px; }
+  .hero-promise-title { font-size: 1.3rem; }
+  .hero-promise br { display: none; }
   .hero-photos { max-width: 290px; gap: 8px; }
   .hero-photos img:nth-child(3n+2) { transform: translateY(16px); }
   .about-img .about-inset { left: -14px; bottom: -28px; width: 38%; border-width: 4px; }
