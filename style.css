@@ -264,6 +264,7 @@ section { padding: 100px 0; }
 
 .color-intro { max-width: 680px; margin: 0 auto 1.8rem; text-align: center; }
 .color .menu-photos { margin: 0 0 28px; }
+.menu-photos + .feature-photos { max-width: 824px; margin: -22px auto 28px; gap: 6px; }
 .color .menu-photos img { object-position: center 35%; }
 .color-intro p { margin-bottom: .6rem; }
 .color-lead { font-family: var(--serif); font-size: 1.35rem; color: var(--brown); line-height: 1.5; }
@@ -494,9 +495,9 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .hero-promise p:last-child { font-size: 1.02rem; font-weight: 300; color: var(--text); line-height: 1.7; }
 
 /* 프리미엄 컬러 라인 영상 */
-.premium-photos { display: grid; grid-template-columns: 1.794fr .75fr .75fr; gap: 8px; align-items: start; }
-.premium-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 35%; border-radius: 80px 80px 4px 4px; background: var(--sand); }
-.premium-photos img.wide { aspect-ratio: 1290 / 719; object-position: center; }
+.feature-photos { display: grid; grid-template-columns: 1.794fr .75fr .75fr; gap: 8px; align-items: start; }
+.feature-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 35%; border-radius: 80px 80px 4px 4px; background: var(--sand); }
+.feature-photos img.wide { aspect-ratio: 1290 / 719; object-position: center; }
 .photo-caption { text-align: center; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; }
 .color-cards + .menu-group, .photo-caption + .menu-group { margin-top: 4.5rem; }
 
@@ -568,9 +569,10 @@ html[lang="ko"] .signature { font-family: var(--serif); }
   .menu-photos { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px 32px; padding: 0 16px 6px; gap: 10px; scrollbar-width: none; }
   .menu-photos::-webkit-scrollbar { display: none; }
   .menu-photos img { flex-basis: 120px; width: 120px; scroll-snap-align: start; border-radius: 60px 60px 4px 4px; }
-  .premium-photos { grid-template-columns: 1fr 1fr; gap: 6px; }
-  .premium-photos img { border-radius: 60px 60px 4px 4px; }
-  .premium-photos img.wide { grid-column: 1 / -1; border-radius: 48px 48px 4px 4px; }
+  .feature-photos { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .menu-photos + .feature-photos { margin-top: -26px; }
+  .feature-photos img { border-radius: 60px 60px 4px 4px; }
+  .feature-photos img.wide { grid-column: 1 / -1; border-radius: 48px 48px 4px 4px; }
   .price-card { padding: 34px 24px; }
   .menu-list { padding: 4px 18px; }
   .color-table th, .color-table td { padding: 13px 12px; }
