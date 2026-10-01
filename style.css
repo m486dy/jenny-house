@@ -254,6 +254,8 @@ section { padding: 100px 0; }
 .color-table td:last-child { background: rgba(160,118,90,.06); }
 
 .color-intro { max-width: 680px; margin: 0 auto 1.8rem; text-align: center; }
+.color .menu-photos { margin: 0 0 28px; }
+.color .menu-photos img { object-position: center 35%; }
 .color-intro p { margin-bottom: .6rem; }
 .color-lead { font-family: var(--serif); font-size: 1.35rem; color: var(--brown); line-height: 1.5; }
 .chips { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 1.2rem; }
