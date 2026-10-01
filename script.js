@@ -44,5 +44,18 @@ document.querySelectorAll(".tab").forEach((tab) =>
   })
 );
 
+// 프리미엄 컬러 영상: 화면에 보일 때만 재생
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const videoObserver = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting && !reduceMotion) video.play().catch(() => {});
+      else video.pause();
+    }),
+  { threshold: 0.4 }
+);
+document.querySelectorAll(".video-strip video").forEach((v) => videoObserver.observe(v));
+
 // 하단 연도 자동 표시
 document.getElementById("year").textContent = new Date().getFullYear();
