@@ -476,9 +476,20 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .color-table th, .color-table td, .menu-list li { border-bottom-color: var(--line); }
 .color-table td:last-child { background: rgba(160, 118, 90, .05); }
 .includes { border-top-color: var(--line); }
-.includes li::before { content: "—"; color: var(--accent); font-size: .8em; top: .15em; }
-.color-points { border-top: 0; padding-top: .4rem; }
-.color-points li::before { content: "·"; }
+.includes { text-align: center; padding-top: .4rem; font-size: .92rem; color: var(--ink); }
+.includes li { padding: .62rem 0; margin: 0; border-bottom: 1px solid var(--line); letter-spacing: .02em; }
+.includes li:last-child { border-bottom: 0; }
+.includes li::before { content: none; }
+.color-points {
+  margin-top: 1.2rem; padding: 1.1rem 1.3rem; border: 0; border-radius: 2px;
+  background: rgba(160, 118, 90, .07); color: var(--text); font-size: .88rem; line-height: 1.6;
+}
+.color-points li { padding-left: 16px; margin-bottom: .5rem; }
+.color-points li:last-child { margin-bottom: 0; }
+.color-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.cut-styles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 824px; margin: 28px auto 0; }
+.cut-styles img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 25%; border-radius: 80px 80px 4px 4px; background: var(--sand); }
+.cut-styles + .menu-group { margin-top: 4rem; }
 .ml-head { justify-content: space-between; }
 .ml-head::after { display: none; }
 .badge { border-radius: 0; background: transparent; border: 1px solid var(--line); font-weight: 400; letter-spacing: .04em; }
@@ -533,7 +544,8 @@ html[lang="ko"] .signature { font-family: var(--serif); }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-photos { order: -1; max-width: 420px; width: 100%; margin: 0 auto; }
   .about-img { max-width: 440px; margin: 0 auto; width: calc(100% - 24px); }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid, .cut-styles { grid-template-columns: repeat(2, 1fr); }
+  .cut-styles img { border-radius: 60px 60px 4px 4px; }
 }
 
 /* ===== 휴대폰 ===== */
