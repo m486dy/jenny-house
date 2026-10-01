@@ -1,12 +1,12 @@
 /* ===== 색상 (따뜻한 베이지 톤) ===== */
 :root {
-  --cream: #faf6f0;
-  --beige: #f1e8dc;
-  --sand: #e3d3bf;
+  --cream: #fbf7f1;
+  --beige: #f3e9dd;
+  --sand: #e8d9c6;
   --taupe: #b89c7e;
   --accent: #a0765a;
   --accent-dark: #845d44;
-  --brown: #4a3b30;
+  --brown: #43362d;
   --text: #5c4d42;
   --muted: #8f7f72;
   --serif: "Cormorant Garamond", Georgia, serif;
@@ -363,6 +363,100 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
 .logo, .menu a.lang-switch[lang="en"] { font-family: "Cormorant Garamond", Georgia, serif; }
 .menu a.lang-switch[lang="en"] { font-family: "Jost", sans-serif; }
 
+/* ===== 세련된 톤: 따뜻한 조명 · 가벼운 글씨 · 여백 ===== */
+body {
+  background:
+    radial-gradient(60% 40% at 10% 0%, rgba(255, 233, 204, .7), transparent 70%),
+    radial-gradient(50% 35% at 100% 28%, rgba(242, 214, 180, .32), transparent 70%),
+    radial-gradient(55% 40% at 0% 70%, rgba(255, 238, 214, .45), transparent 70%),
+    #faf4ec;
+  color: #5f5046;
+}
+.pains, .result, .services {
+  background:
+    radial-gradient(60% 45% at 50% 12%, rgba(255, 246, 232, .8), transparent 70%),
+    linear-gradient(180deg, rgba(240, 224, 204, 0) 0%, rgba(240, 224, 204, .6) 16%, rgba(240, 224, 204, .6) 84%, rgba(240, 224, 204, 0) 100%);
+}
+.footer { background: linear-gradient(180deg, rgba(240, 224, 204, 0), rgba(240, 224, 204, .6) 40%); }
+.color { background: radial-gradient(70% 45% at 50% 0%, rgba(255, 240, 220, .7), transparent 70%); }
+.about { background: radial-gradient(45% 60% at 22% 45%, rgba(255, 229, 196, .5), transparent 70%); }
+.family { background: radial-gradient(55% 75% at 50% 50%, rgba(255, 234, 208, .55), transparent 72%); }
+.gallery { background: radial-gradient(50% 45% at 85% 10%, rgba(255, 232, 202, .5), transparent 70%); }
+.visit { background: radial-gradient(45% 60% at 10% 50%, rgba(255, 232, 202, .45), transparent 70%); }
+.nav { background: rgba(251, 246, 239, .82); }
+
+/* 은은한 조명 — 첫 화면 사진 뒤 */
+.hero { overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: -10% -5% -10% 40%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255, 222, 180, .55), rgba(255, 222, 180, 0));
+  filter: blur(10px);
+}
+.hero-inner { position: relative; }
+
+/* 글씨: 더 가볍고 여유 있게 */
+h1, h2, h3 { font-weight: 400; letter-spacing: .005em; }
+.hero h1 { font-weight: 300; line-height: 1.08; }
+h2 { font-weight: 300; }
+.eyebrow { font-size: .72rem; letter-spacing: .3em; font-weight: 400; }
+.logo { font-weight: 500; }
+.btn { font-weight: 400; letter-spacing: .18em; font-size: .78rem; padding: 15px 32px; }
+.price { font-weight: 300; }
+.ml-price { font-weight: 500; }
+.color-table td { font-weight: 500; }
+.price, .ml-price, .color-table td, .pain .num { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+.section-sub { color: var(--muted); }
+
+/* 정리: 테두리 대신 부드러운 그림자 */
+.price-card, .menu-list, .color-table, .pain {
+  background: rgba(255, 252, 247, .78);
+  border: 1px solid rgba(214, 190, 163, .28);
+  box-shadow: 0 24px 48px -32px rgba(110, 76, 44, .28);
+}
+.price-card.featured { border-color: rgba(165, 122, 92, .45); }
+.price-card:hover { box-shadow: 0 28px 56px -30px rgba(110, 76, 44, .34); }
+.color-table thead th { background: rgba(243, 233, 221, .7); }
+.ml-head { justify-content: space-between; }
+.ml-head::after { display: none; }
+.includes { border-top-color: rgba(214, 190, 163, .4); }
+.color-points { border-top: 0; padding-top: .4rem; }
+.quotes span { background: rgba(255, 252, 247, .6); border-color: transparent; }
+
+/* 포함 시술: 태그 대신 한 줄 텍스트 */
+.chips { gap: 0; margin-top: 1rem; }
+.chips li {
+  background: none; border: 0; border-radius: 0; padding: 0;
+  font-size: .78rem; letter-spacing: .12em; color: var(--muted);
+}
+.chips li + li::before { content: "·"; margin: 0 .7em; color: var(--taupe); }
+
+/* 첫 화면 문구: 박스 없이 얇은 선과 여백으로 */
+.hero-promise {
+  background: none; border: 0; border-radius: 0; padding: 0;
+  margin: 0 0 2.6rem; position: relative; padding-top: 1.3rem;
+}
+.hero-promise::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 44px; height: 1px; background: var(--accent);
+}
+.hero-promise-title {
+  font-family: "Jost", sans-serif; font-size: .74rem; font-weight: 400;
+  letter-spacing: .3em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: .55rem; line-height: 1.6;
+}
+.hero-promise p:last-child { font-family: var(--serif); font-size: 1.25rem; font-weight: 300; color: var(--brown); line-height: 1.55; }
+
+/* 한국어 페이지 */
+html[lang="ko"] body { font-weight: 300; }
+html[lang="ko"] .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); font-weight: 300; line-height: 1.32; letter-spacing: -.01em; }
+html[lang="ko"] h2 { font-size: clamp(1.55rem, 2.9vw, 2.15rem); font-weight: 300; line-height: 1.45; letter-spacing: -.005em; }
+html[lang="ko"] h3, html[lang="ko"] .menu-group { font-weight: 400; }
+html[lang="ko"] .price-card h3 { font-size: 1.35rem; }
+html[lang="ko"] .eyebrow { font-size: .76rem; letter-spacing: .2em; }
+html[lang="ko"] .btn { letter-spacing: .1em; font-size: .82rem; }
+html[lang="ko"] .hero-promise p:last-child { font-size: 1.08rem; line-height: 1.75; }
+html[lang="ko"] .ml-name { font-weight: 400; }
+html[lang="ko"] .pain-close, html[lang="ko"] .color-lead { font-weight: 300; }
+html[lang="ko"] .chips li { letter-spacing: .06em; }
+
 /* ===== 작은 노트북 ===== */
 @media (max-width: 1080px) {
   .menu { gap: 22px; }
@@ -401,8 +495,8 @@ html[lang="ko"] .menu a:not(.btn), html[lang="ko"] .footer-links a { letter-spac
   .nav.menu-open .burger span:nth-child(2) { opacity: 0; }
   .nav.menu-open .burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   .hero { padding: 28px 0 56px; }
-  .hero-promise { padding: 16px 18px; }
-  .hero-promise-title { font-size: 1.3rem; }
+  .hero-promise-title { letter-spacing: .22em; font-size: .7rem; }
+  .hero-promise p:last-child { font-size: 1.12rem; }
   .hero-promise br { display: none; }
   .hero-photos { max-width: 290px; gap: 8px; }
   .hero-photos img:nth-child(3n+2) { transform: translateY(16px); }
