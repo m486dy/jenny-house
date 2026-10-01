@@ -493,8 +493,8 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .hero-promise p:last-child { font-size: 1.02rem; font-weight: 300; color: var(--text); line-height: 1.7; }
 
 /* 프리미엄 컬러 라인 영상 */
-.video-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
-.video-strip video { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: var(--sand); }
+.video-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.video-strip video { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: var(--sand); border-radius: 80px 80px 6px 6px; }
 .video-caption { text-align: center; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; }
 .color-cards + .menu-group, .video-caption + .menu-group { margin-top: 4.5rem; }
 
@@ -566,9 +566,9 @@ html[lang="ko"] .signature { font-family: var(--serif); }
   .menu-photos { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px 32px; padding: 0 16px 6px; gap: 10px; scrollbar-width: none; }
   .menu-photos::-webkit-scrollbar { display: none; }
   .menu-photos img { flex-basis: 120px; width: 120px; scroll-snap-align: start; }
-  .video-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }
+  .video-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }
   .video-strip::-webkit-scrollbar { display: none; }
-  .video-strip video { flex: 0 0 62%; scroll-snap-align: start; }
+  .video-strip video { flex: 0 0 46%; min-width: 0; scroll-snap-align: start; }
   .price-card { padding: 34px 24px; }
   .menu-list { padding: 4px 18px; }
   .color-table th, .color-table td { padding: 13px 12px; }
