@@ -494,10 +494,11 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .hero-promise p:last-child { font-size: 1.02rem; font-weight: 300; color: var(--text); line-height: 1.7; }
 
 /* 프리미엄 컬러 라인 영상 */
-.video-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.video-strip video { flex: 0 0 calc((100% - 20px) / 3); min-width: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--sand); border-radius: 60px 60px 4px 4px; }
-.video-caption { text-align: center; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; }
-.color-cards + .menu-group, .video-caption + .menu-group { margin-top: 4.5rem; }
+.premium-photos { display: grid; grid-template-columns: 1.794fr .75fr .75fr; gap: 8px; align-items: start; }
+.premium-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 35%; border-radius: 80px 80px 4px 4px; background: var(--sand); }
+.premium-photos img.wide { aspect-ratio: 1290 / 719; object-position: center; }
+.photo-caption { text-align: center; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-top: 1rem; }
+.color-cards + .menu-group, .photo-caption + .menu-group { margin-top: 4.5rem; }
 
 /* 한국어 페이지 */
 html[lang="ko"] body { font-weight: 300; }
@@ -512,7 +513,7 @@ html[lang="ko"] .menu a:not(.btn) { font-size: .86rem; letter-spacing: .08em; }
 html[lang="ko"] .ml-name { font-size: 1rem; }
 html[lang="ko"] .color-table tbody th { font-size: .98rem; }
 html[lang="ko"] .chips li { letter-spacing: .08em; font-size: .78rem; }
-html[lang="ko"] .video-caption { letter-spacing: .12em; font-size: .78rem; }
+html[lang="ko"] .photo-caption { letter-spacing: .12em; font-size: .78rem; }
 html[lang="ko"] .price, html[lang="ko"] .ml-price, html[lang="ko"] .signature { font-family: "Jost", sans-serif; }
 html[lang="ko"] .signature { font-family: var(--serif); }
 .price, .ml-price, .color-table td { font-variant-numeric: lining-nums; }
@@ -567,10 +568,9 @@ html[lang="ko"] .signature { font-family: var(--serif); }
   .menu-photos { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px 32px; padding: 0 16px 6px; gap: 10px; scrollbar-width: none; }
   .menu-photos::-webkit-scrollbar { display: none; }
   .menu-photos img { flex-basis: 120px; width: 120px; scroll-snap-align: start; border-radius: 60px 60px 4px 4px; }
-  .video-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }
-  .video-strip::-webkit-scrollbar { display: none; }
-  .video-strip { flex-wrap: nowrap; justify-content: flex-start; gap: 8px; }
-  .video-strip video { flex: 0 0 82%; min-width: 0; scroll-snap-align: start; border-radius: 48px 48px 4px 4px; }
+  .premium-photos { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .premium-photos img { border-radius: 60px 60px 4px 4px; }
+  .premium-photos img.wide { grid-column: 1 / -1; border-radius: 48px 48px 4px 4px; }
   .price-card { padding: 34px 24px; }
   .menu-list { padding: 4px 18px; }
   .color-table th, .color-table td { padding: 13px 12px; }
