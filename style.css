@@ -116,6 +116,9 @@ section { padding: 100px 0; }
   background: var(--cream); border: 1px solid var(--sand); border-radius: 6px;
   padding: 28px 22px; font-size: .98rem; color: var(--brown);
 }
+.pain-title { font-size: .72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: .55rem; line-height: 1.4; }
+html[lang="ko"] .pain-title { font-size: .86rem; letter-spacing: .06em; text-transform: none; }
+.pain p { font-size: .95rem; line-height: 1.65; color: var(--text); }
 .pain .num { display: block; font-family: var(--serif); font-size: 1.6rem; color: var(--taupe); margin-bottom: .6rem; }
 .pain-close { text-align: center; margin-top: 2.6rem; font-family: var(--serif); font-size: 1.6rem; color: var(--brown); }
 .pain-close strong { color: var(--accent); font-weight: 600; }
@@ -432,6 +435,11 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .book-option .value { font-weight: 300; font-size: 1.2rem; letter-spacing: .04em; }
 
 /* 메뉴 · 로고 */
+.flag { display: inline-block; width: 18px; height: 12px; vertical-align: -1px; box-shadow: 0 0 0 1px rgba(34, 29, 25, .1); border-radius: 1px; }
+.logo { display: inline-flex; align-items: center; }
+.logo > span:not(.logo-flags) { margin-left: .42em; }
+.logo-flags { display: inline-flex; gap: 4px; margin-left: 12px; letter-spacing: 0; }
+.lang-switch .flag, .footer-links .flag { margin-right: 6px; }
 .logo { font-family: "Jost", sans-serif; font-size: 1.15rem; font-weight: 400; letter-spacing: .34em; text-transform: uppercase; color: var(--ink); }
 .logo span { font-style: normal; font-weight: 300; color: var(--ink); }
 .nav { background: rgba(250, 245, 238, .85); }
@@ -476,10 +484,25 @@ h3 { font-weight: 400; letter-spacing: .03em; }
 .color-table th, .color-table td, .menu-list li { border-bottom-color: var(--line); }
 .color-table td:last-child { background: rgba(160, 118, 90, .05); }
 .includes { border-top-color: var(--line); }
-.includes { text-align: center; padding-top: .4rem; font-size: .92rem; color: var(--ink); }
-.includes li { padding: .62rem 0; margin: 0; border-bottom: 1px solid var(--line); letter-spacing: .02em; }
-.includes li:last-child { border-bottom: 0; }
-.includes li::before { content: none; }
+.includes {
+  text-align: left; margin-top: .4rem; padding: 1.1rem 0 0; border-top: 1px solid var(--line);
+  font-size: .92rem; color: var(--ink);
+}
+.includes::before {
+  content: "What's included"; display: block; margin-bottom: .8rem;
+  font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: var(--accent); font-weight: 500;
+}
+html[lang="ko"] .includes::before { content: "포함 서비스"; letter-spacing: .16em; font-size: .72rem; }
+.includes li { position: relative; padding: 0 0 0 30px; margin: 0 0 .7rem; line-height: 1.5; letter-spacing: .01em; border: 0; }
+.includes li:last-child { margin-bottom: 0; }
+.includes li::before {
+  content: ""; position: absolute; left: 0; top: .05em; width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(160, 118, 90, .12);
+}
+.includes li::after {
+  content: ""; position: absolute; left: 6.5px; top: calc(.05em + 4.5px); width: 4px; height: 7px;
+  border: solid var(--accent-dark); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+}
 .color-points {
   margin-top: 1.2rem; padding: 1.1rem 1.3rem; border: 0; border-radius: 2px;
   background: rgba(160, 118, 90, .07); color: var(--text); font-size: .88rem; line-height: 1.6;
